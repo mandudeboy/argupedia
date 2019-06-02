@@ -11,7 +11,9 @@ Welcome to Argupedia!
 
 * Download neo4j here: https://neo4j.com/download/ 
 * Go to the downloaded neo4j directory in a terminal and do: ```./bin/neo4j console```
-* visit http://localhost:7474 to see that Neo4j is up and running. Do a tutorial if you want
+* visit http://localhost:7474 to see that Neo4j is up and running. 
+* Use password "neo4j" for first time users and then change password to the one found in application.properties
+* Do a tutorial if you want :)
 * go to project and run: mvn eclipse:eclipse to build the eclipse project
 * import the project in eclipse and "run as Spring Boot Application"
 * try the endpoints. You can see them by running ```curl http://localhost:8080``` in a terminal
