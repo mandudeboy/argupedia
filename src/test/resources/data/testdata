@@ -1,0 +1,85 @@
+CREATE (prop0:Proposition {title:'Every human has a right to decide what they do with their own body'})
+CREATE (fact1:Proposition {title:'Every woman is a human'})
+CREATE (source0:Source {title:'www.google.com'})
+CREATE (arg0:Argument {title:'The female Autonomy', summary:'Every human has a right to decide what they do with their own body and every woman is a human, so every woman has a right to decide what she does with her own body'})
+CREATE (prop1:Proposition {title:'Every woman has a right to decide what she does with her own body'})
+CREATE (prop2:Proposition {title:'A fetus is a part of a womans body before birth, and becomes a separate human after birth'})
+CREATE (arg1:Argument {title:'The Mother Autonomy', summary:'Every woman has a right to her own body, and fetuses are only a part of the womans body before they are born, so every woman has a right to her fetus'})
+CREATE (prop3:Proposition {title:'Every pregnant woman has a right to decide what they do with their fetus'})
+CREATE (fact2:Proposition {title:'An abortion is when a pregnant woman removes the fetus from her body, ending the pregnant state'})
+CREATE (arg2:Argument {title:'The Abortion Right', summary:'Every pregnant woman has a right to do what she wants with her fetus, and abortion is one thing you can do with a fetus, therefor every pregnant woman has a right to do an abortion'})
+CREATE (prop4:Proposition {title:'Every pregnant woman has a right to do an abortion'})
+
+CREATE 
+	(fact1)<-[:SUPPORTS]-(source0),
+	(arg0)<-[:SUPPORTS]-(prop0),
+	(arg0)<-[:SUPPORTS]-(fact1),
+	(prop1)<-[:SUPPORTS]-(arg0),
+	(arg1)<-[:SUPPORTS]-(prop1),
+	(arg1)<-[:SUPPORTS]-(prop2),
+	(prop3)<-[:SUPPORTS]-(arg1),
+	(arg2)<-[:SUPPORTS]-(prop3),
+	(arg2)<-[:SUPPORTS]-(fact2),
+	(prop4)<-[:SUPPORTS]-(arg2)
+	
+
+CREATE (humansCanCompareQuality:Proposition {title:'Humans can compare the quality of two different things of the same type without first having to define quality'})
+CREATE (humansCanMeasureQuality:Proposition {title:'Humans can easily learn to measure a specific quality of a thing if they just get a brief definition of the quality and a simple example to look at'})	
+CREATE (localHumanQualitiesExist:Proposition {title:'Some qualities are such that only some humans know and care about them. These are called different things, but can be grouped together as Local Qualities'})
+CREATE (culturalHumanQualitiesExist:Proposition {title:'Some qualities are such that only some cultural group of humans know and care about them. These are called Cultural Qualities'})
+CREATE (universalHumanQualitiesExist:Proposition {title:'Some qualities are such that every human know and care about them. These are called Universal Human Qualities'})
+CREATE (thingCategoryIsUniqueSetOfQualities:Proposition {title:'Each category of things has a unique set of qualities. If two categories of things have the same set of qualities, the categories are the same'})
+CREATE (thingIsUniqueCombinationOfQualityValues:Proposition {title:'Each thing in a category of things has a unique combination of values on each of it's available qualities. If two things in the same category have the same combination of values of all their available qualities, they are the same thing'})
+CREATE (opinionsAreThings:Proposition {title:'An opinion is a thing in the category Opinions'})
+CREATE (argumentsAreThings:Proposition {title:'An argument is a thing in the category Arguments'})
+CREATE (opinionsHaveQualities:Proposition {title:'Each opinion has a unique combination of values on each of it's available qualities. If two opinions have the same combination of values of all their available qualities, they are the same opinion'})
+
+CREATE (unqualifiedOpinionsExist:Proposition {title:'If an opinion is held without any argument motivating that opinion it is called an Unqualified Opinion'})
+CREATE (qualifiedOpinionsExist:Proposition {title:'If an opinion is held with one or more arguments motivating that opinion it is called a Qualified Opinion'})
+CREATE (qualifiedOpinionsHaveGeneralQuality:Proposition {title:'The qualities of each argument backing up an opinion can be summed up. This sum is called the General quality of the argument'})
+CREATE (propositionsExist:Proposition {title:'An opinion about whether an action should be taken or not is called a proposition', example:'People should eat less sugar'})
+CREATE (unqualifiedPropositionsExist:Proposition {title:'If a proposition is made without any argument motivating the proposition it is called an Unqualified Proposition'})
+CREATE (qualifiedPropositionsExist:Proposition {title:'If a proposition is made with one or more arguments motivating the proposition it is called a Qualified Proposition'})
+
+
+CREATE (propositionsCanBeModeledAsGraph:Proposition {title:'Opinions and the arguments that back them up, if any, can be modeled as a graph'})
+CREATE (interactiveGraphModelCanBeMade:Proposition {title:'A graph model of opinions and their arguments can be made interactive using code'})
+CREATE (humansCanInteractWithInteractiveGraphsModels:Proposition {title:'Humans can interact with interactive graph models over the Internet'})
+CREATE (humansCanMeasureQualityInInteractiveGraphModels:Proposition {title:'Interactive graph models can let humans subjectively measure some of the qualities of the things in the graph model'})
+CREATE (humanMadeSystemsCanEvolve:Proposition {title:'Human made systems can be changed by humans if a decision is taken to do so'})
+
+CREATE (argupediaExists:Proposition {title:'An interactive graph model of opinions and their arguments has been created in a human-made system that, including it's human users, is called Argupedia'})
+CREATE (argupediaCanEvolve:Proposition {title:'Argupedia can be changed by humans if a decision is taken to do so'})
+
+CREATE (decisionsCanBeBasedOnQuality:Proposition {title:'Human decisions can be based on the proposition that currently has the highest general quality'})
+CREATE (argupediaCanShowAllPropositionsAndTheirGeneralQuality:Proposition {title:'Argupedia can show all propositions and their general quality'})
+CREATE (decisionRequirements:Proposition {title:'To take a decision there must be criteria for how decisions are taken it must be possible to fulfill these criteria'})
+CREATE (argupediaHasDecisionRequirements:Proposition {title:'Argupedia has criteria for how decisions are taken and can fulfill these criteria'})
+CREATE (argupediaCanTakeDecisions:Proposition {title:'Argupedia can be used to take decisions'})
+CREATE (humanMadeSystemsCanEvolve:Proposition {title:'How to change argupedia is a decision that can be taken'})
+CREATE (argupediaCanDecideToChangeArgupedia:Proposition {title:'Argupedia can be used to take decisions regarding how to change argupedia'})
+CREATE (argupediaDecisionsSuck:Proposition {title:'The criteria for how decisions are taken in argupedia are initially not very good'})
+CREATE (argupediaDecisionsCanImprove:Proposition {title:'The criteria for how decisions are taken in argupedia can be improved by deciding how to do it in argupedia'})
+
+CREATE (argupediaDecisionsSuck:Proposition {title:'A system that can change and that can take decisions about it's own change can become better with time without external interference'})
+CREATE (argupediaDecisionsSuck:Proposition {title:'Systems that can change will become better with time if decisions to change it for the better are more likely to be taken than decisions to change it for the worse'})
+CREATE (argupediaDecisionsSuck:Proposition {title:'In argupedia decisions to change argupedia for the better are more likely to be taken than decisions to change argupedia for the worse'})
+CREATE (argupediaDecisionsSuck:Proposition {title:'A system that becomes better with time can become great even if it starts out bad'})
+CREATE (minimumArgupediaCanCreateGreatArgupedia:Proposition {title:'A minimum version of Argupedia can be used to create a great version of Argupedia'})
+
+
+CREATE
+	()<-[:SUPPORTS]-(),
+	()<-[:SUPPORTS]-(),
+	()<-[:SUPPORTS]-(),
+	()<-[:SUPPORTS]-(),
+	()<-[:SUPPORTS]-(),
+	()<-[:SUPPORTS]-(),
+	()<-[:SUPPORTS]-(),
+	()<-[:SUPPORTS]-(),
+	()<-[:SUPPORTS]-(),
+	()<-[:SUPPORTS]-(),
+	()<-[:SUPPORTS]-(),
+	()<-[:SUPPORTS]-(),
+	()<-[:SUPPORTS]-(),
+	
